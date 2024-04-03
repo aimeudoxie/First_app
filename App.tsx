@@ -5,16 +5,15 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image
-        source={{
-          uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
-        }}
-        style={styles.logo}
-      />
-      <Text style={styles.text}>Welcome to my first React App</Text>
+      
+      <View style={styles.buttons}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Get Started</Text>
+        <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Sign In</Text>
+      </TouchableOpacity>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -23,28 +22,28 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#27393F',
+    backgroundColor: '#111827',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  text: {
-    color: '#fff',
-    fontFamily: 'Arial',
-    fontSize: 20,
+  buttons:{
+    flex:1,
+    justifyContent:'flex-end',
+    width:'100%',
+    alignItems:'center',
+    bottom:'17%',
   },
   button: {
     backgroundColor: '#fff',
-    padding: 10,
-    margin: 30,
-    color: '#27393F',
-    fontFamily: 'Arial',
-    fontSize: 15,
-    borderRadius: 10,
+    padding: 8,
+    margin: 15,
+    borderRadius: 50,
+    width:'50%',
   },
   buttonText: {
-    color: '#27393F',
+    color: '#111827',
     fontFamily: 'Arial',
-    fontSize: 15,
+    fontSize: 20,
+    textAlign:'center',
   },
-  logo: { width: 200, height: 200 },
 });
