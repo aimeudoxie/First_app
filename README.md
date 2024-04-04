@@ -2,5 +2,5 @@
 
 Welcome to my first React Native project! Here are some screenshots:
 
-![Screenshot 1](screenshots/signup.png)
+![Sign Up](screenshoots/signup.png)
 *This is the screen for signing up*
