@@ -12,11 +12,18 @@ export default function Signup() {
   return (
     <View style={styles.container}>
             <View style={styles.headers}>
-                <Text style={styles.left}> </Text>
+                <View style={styles.left}> 
+                <Image
+        source={require('../assets/left.png')}/> 
+      </View>
                 <Text style={styles.title}>
                 Sign Up
             </Text>
-                <Text style={styles.right}>  </Text>
+                <View style={styles.right}> 
+                <Image
+        source={require('../assets/menu.png')}/>  
+        </View>
+                
             </View>
             <View style={styles.form}>
             <Text style={styles.label}>Full Names  </Text>
@@ -58,9 +65,13 @@ export default function Signup() {
       <Text style={styles.text}>Already have account sign In  </Text>
             <Text style={styles.text}>or sign In with </Text>
             <TouchableOpacity style={styles.socials}>
+            <Image
+        source={require('../assets/google.png')} style={styles.google}/> 
         <Text style={styles.socialText}>Continue with Google</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.socials}>
+      <Image
+        source={require('../assets/github.png')} style={styles.google}/> 
         <Text style={styles.socialText}>Continue with Github</Text>
       </TouchableOpacity>
             </View>
@@ -101,7 +112,7 @@ const styles = StyleSheet.create({
         width:50,
         height:50,
         borderRadius: 50,
-        alignItems:'flex-start',
+        alignItems:'center',
         justifyContent:'center',
         backgroundColor: '#111827',
 
@@ -110,7 +121,7 @@ const styles = StyleSheet.create({
         width:50,
         height:50,
         borderRadius: 50,
-        alignItems:'flex-end',
+        alignItems:'center',
         justifyContent:'center',
         backgroundColor: '#111827',
 
@@ -148,16 +159,21 @@ const styles = StyleSheet.create({
         margin:5,
       },
       socials:{
-        backgroundColor: '#E8E8E8',
-        alignItems:'center',
-        marginLeft:55,
-        marginTop:30,
-        padding: 8,
-        width:'70%',
+        backgroundColor: '#D9D9D9',
+        justifyContent:'space-evenly',
+        flexDirection:'row',
+        marginLeft:75,
+        marginTop:20,
+        padding: 10,
+        width:'60%',
       },
       socialText:{
         color: '#111827',
       fontSize: 13,
       textAlign:'center',
+      },
+      google:{
+        width:20,
+        height:20,
       }
   });
